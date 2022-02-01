@@ -5,24 +5,30 @@
 /*font size*/
 /* grid of main section*/
 .main-container {
-  margin: auto;
   padding: 2rem;
   width: 100vw;
-  height: 1000px;
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-row: 1fr 1fr;
-  grid-template-areas: "courses courses" "about about";
-  /*a partir de pantalla tablet se divide a la mitad*/
-  /*estilos de las secciones*/
+  grid-template-areas: "courses courses" "about about";
 }
-@media screen and (min-width: 768px) {
-  .main-container .main-container {
-    grid-template-areas: "courses about" "courses about";
+
+@media screen and (min-width: 576px) {
+  .container {
+    grid-template-areas: "courses courses" "about about";
   }
 }
-.main-container .courses {
+
+/*a partir de pantalla tablet se divide a la mitad*/
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-areas: "courses about"  "courses about";
+  }
+}
+
+/*estilos de las secciones*/
+.courses {
   grid-area: courses;
   border-width: 1px;
   border-style: solid;
@@ -32,7 +38,8 @@
   margin: 0;
   color: #060606;
 }
-.main-container .about {
+
+.about {
   grid-area: about;
   border-width: 1px;
   border-style: solid;
@@ -79,16 +86,113 @@ p {
         margin: 0 auto;
     }
 }*/
-nav {
+.navbar {
   height: 80px;
   width: 100vw;
-  background-color: cornflowerblue;
+  background-color: #000000;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  /*esta es la lista de link de navegación*/
+  /*este es el ícono de la hamburgesa*/
+}
+
+.navbar__logo {
+  height: 200px;
+}
+
+.navbar___list {
+  list-style-type: none;
+}
+
+.navbar___item {
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+.navbar___item a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar___item a:hover {
+  color: #2e1503;
+}
+
+.navbar__navbar_menu {
+  background-color: #fff;
+  margin-bottom: 4px;
+}
+
+.navbar .active {
+  display: block;
+}
+
+@media (min-width: 100px) {
+  .navbar {
+    flex-direction: column;
+    position: relative;
+  }
+  .navbar__icon {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+  }
+  .navbar__menu {
+    display: block;
+    flex-direction: column;
+    padding: 30px;
+    text-align: right;
+  }
+  .navbar__list {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    display: none;
+  }
+  .navbar__item {
+    width: 100%;
+    display: inline-block;
+    border-top: 1px solid white;
+  }
+}
+
+@media (min-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    position: relative;
+    height: 80px;
+  }
+  .navbar__logo {
+    width: 100%;
+  }
+  .navbar__menu {
+    display: none;
+    top: 15px;
+    text-align: center;
+    display: none;
+  }
+  .navbar__list {
+    list-style-type: none;
+    width: 100%;
+    text-align: right;
+    padding-top: 10px;
+    display: block;
+  }
+  .navbar__item {
+    width: 100%;
+    display: inline;
+    border-top: none;
+  }
 }
 
 header {
-  height: 200px;
+  height: 500px;
   width: 100vw;
-  background-color: #64ed82;
+  background-image: url(/assets/imagenes/desarrolloweb2021t.svg);
 }
 
 footer {
@@ -98,5 +202,3 @@ footer {
   color: #fff;
   text-align: center;
 }
-
-/*# sourceMappingURL=main.css.map */

@@ -3,7 +3,7 @@
 .main-container{
    padding: 2rem;
    width: 100vw;
-   height: 1000px;
+   height: 70vh;
    display: grid;
    grid-template-columns: 1fr 1fr ;
    grid-template-rows: 1fr 1fr;
@@ -13,7 +13,7 @@
 }
 
 
-   /*a partir de pantalla tablet se divide a la mitad*/
+  
    @media screen and (min-width: 576px) {
     .container {
         grid-template-areas: 
@@ -22,6 +22,7 @@
     } 
    }
 
+    /*a partir de pantalla tablet se divide a la mitad*/
    @media screen and (min-width: 768px) {
     .container {
         grid-template-areas: 

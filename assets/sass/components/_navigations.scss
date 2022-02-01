@@ -1,5 +1,123 @@
-nav{
+.navbar{
     height: 80px;
     width: 100vw;
-    background-color: cornflowerblue;
+    background-color: $black;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    
+&__logo {
+    height: 200px;
+}
+
+/*esta es la lista de link de navegación*/
+&___list{
+    list-style-type: none;
+}
+
+&___item {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+&___item a {
+    color: white;
+    text-decoration: none;
+}
+
+&___item a:hover {
+    color: $charcoal;
+}
+
+/*este es el ícono de la hamburgesa*/
+
+&__navbar_menu{
+    background-color: $white;
+    margin-bottom: 4px ;
+}
+
+.active{
+    display: block;
+}
+}
+
+@media (min-width: 100px){
+    
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+
+    .navbar__icon{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        
+    }
+
+
+    .navbar__menu{
+        display: block;
+        flex-direction: column;
+        padding: 30px;
+        text-align: right;
+        
+    }
+
+    .navbar__list{
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+    }
+
+    .navbar__item{
+        width: 100%;
+        display: inline-block;
+        border-top: 1px solid white;
+        
+    }
+
+}
+
+
+@media (min-width: 600px){
+    
+    .navbar{
+        flex-direction: row;
+        position: relative;
+        height: 80px;
+
+         &__logo{
+        width: 100%;
+          }
+
+        &__menu{
+       display: none;
+       
+        top: 15px;
+        text-align: center;
+        display: none;
+          }
+
+          &__list{
+        list-style-type: none;
+        width: 100%;
+        text-align: right;
+        padding-top: 10px;
+        display: block;
+          }
+
+         &__item{
+        width: 100%;
+        display: inline;
+        border-top: none;
+        
+         }
+     
+    }
+
 }
