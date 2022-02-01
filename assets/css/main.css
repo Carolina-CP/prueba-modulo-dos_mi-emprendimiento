@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/*color scheme*/
+/*font family*/
+/*font weight*/
+/*font size*/
+/* grid of main section*/
+.main-container {
+  margin: auto;
+  padding: 2rem;
+  width: 100vw;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row: 1fr 1fr;
+  grid-template-areas: "courses courses" "about about";
+  /*a partir de pantalla tablet se divide a la mitad*/
+  /*estilos de las secciones*/
+}
+@media screen and (min-width: 768px) {
+  .main-container .main-container {
+    grid-template-areas: "courses about" "courses about";
+  }
+}
+.main-container .courses {
+  grid-area: courses;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #060606;
+  background-color: #ffa500;
+  padding: 1rem;
+  margin: 0;
+  color: #060606;
+}
+.main-container .about {
+  grid-area: about;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #060606;
+  background-color: #ffa500;
+  padding: 1rem;
+  margin: 0;
+  color: #060606;
+}
+
+/* reset_html*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* reset_scroll horizontal*/
+body {
+  overflow-x: hidden;
+}
+
+/* reset_imágenes no sobrepasen el ancho de su contenedor*/
+img {
+  max-width: 100%;
+}
+
+/*font weight*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+/*ancho fijo en tamaños grandes
+@media only screen and (min-width:1200px) {
+    body{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}*/
+nav {
+  height: 80px;
+  width: 100vw;
+  background-color: cornflowerblue;
+}
+
+header {
+  height: 200px;
+  width: 100vw;
+  background-color: #64ed82;
+}
+
+footer {
+  height: 100px;
+  width: 100vw;
+  background-color: #060606;
+  color: #fff;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

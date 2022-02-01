@@ -1,0 +1,18 @@
+
+/* reset_html*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* reset_scroll horizontal*/
+body{
+    overflow-x: hidden;
+ }
+
+/* reset_imágenes no sobrepasen el ancho de su contenedor*/
+img{
+    max-width: 100%;
+}
