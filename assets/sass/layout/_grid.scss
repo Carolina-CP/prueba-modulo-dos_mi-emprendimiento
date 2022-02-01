@@ -14,7 +14,7 @@
 
 
    /*a partir de pantalla tablet se divide a la mitad*/
-   @media screen and (min-width: 320px) {
+   @media screen and (min-width: 576px) {
     .container {
         grid-template-areas: 
         "courses courses"
@@ -22,7 +22,7 @@
     } 
    }
 
-   @media screen and (min-width: 700px) {
+   @media screen and (min-width: 768px) {
     .container {
         grid-template-areas: 
         "courses about" 
