@@ -7,3 +7,14 @@
     margin: 0;
     color: $sable;
 }
+
+@mixin card-container {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $charcoal;
+    background-color: $white;
+    padding: 1rem;
+    margin: 0;
+    color: $sable;
+    font-family: $ubuntu;
+}

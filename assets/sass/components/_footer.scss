@@ -1,7 +1,36 @@
-footer{
-    height: 100px;
+.footer{
+    height: 80px;
     width: 100vw;
-    background-color: $sable;
-    color: $white;
-    text-align: center;
+    background-color: $black;
+    font-size: 1.2rem;
+    font-family: $ubuntu;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    
+
+    &__link{
+        list-style-type: none;
+    }
+
+    &__item {
+        display: inline-block;
+        padding: 20px 10px;
+    }
+
+    
+    &___item a {
+        color: white;
+        text-decoration: none;
+    }
+
+    &__submit{
+        background-color: $tangerine;
+        padding: 1rem;
+    }
+
+    &__submit:hover{
+        background-color: $orange;
+    }
 }
