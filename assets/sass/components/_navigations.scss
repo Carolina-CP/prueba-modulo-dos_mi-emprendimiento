@@ -1,6 +1,7 @@
 .navbar{
     height: 80px;
     width: 100vw;
+    padding-right: 2rem;
     background-color: $black;
     font-size: 1.2rem;
     display: flex;
@@ -8,23 +9,24 @@
     text-align: center;
     align-items: center;
     
-&__logo {
-    height: 1rem;
+    &__logo {
+    height: 60px;
 }
 
 /*esta es la lista de link de navegación*/
-&___list{
+&__list{
     list-style-type: none;
 }
 
-&___item {
+&__item {
     display: inline-block;
     padding: 20px 10px;
 }
 
-&___item a {
+&__item {
+    a{ 
     color: white;
-    text-decoration: none;
+    text-decoration: none;}
 }
 
 &___item a:hover {
@@ -33,9 +35,14 @@
 
 /*este es el ícono de la hamburgesa*/
 
-&__navbar_menu{
-    background-color: $white;
+&__menu{
+    color: $white;
     margin-bottom: 4px ;
+    display: block;
+}
+
+&__menu:hover{
+    color:$orange;
 }
 
 .active{
@@ -43,35 +50,40 @@
 }
 }
 
-@media (min-width: 100px){
+@media (min-width: 576px){
     
     .navbar{
         flex-direction: column;
         position: relative;
+        height: 18rem;
+        padding: 2rem;
+    }
+
+    .nav__logo{
+        position: absolute;
+        left: 0;
     }
 
     .navbar__icon{
         width: 100%;
         padding: 20px;
-        display: flex;
+        display: block;
         
     }
 
 
     .navbar__menu{
         display: block;
-        flex-direction: column;
         padding: 30px;
         text-align: right;
         
     }
 
     .navbar__list{
-        list-style-type: none;
         width: 100%;
-        text-align: center;
         padding-top: 10px;
         display: none;
+        text-align: right;
     }
 
     .navbar__item{
@@ -84,39 +96,23 @@
 }
 
 
-@media (min-width: 600px){
+@media (min-width: 768px){
     
     .navbar{
         flex-direction: row;
         position: relative;
         height: 80px;
+        padding: 2rem;
 
-         &__logo{
-        width: 100%;
-          }
 
         &__menu{
        display: none;
-       
-        top: 15px;
-        text-align: center;
-        display: none;
           }
 
           &__list{
-        list-style-type: none;
-        width: 100%;
-        text-align: right;
-        padding-top: 10px;
         display: block;
           }
 
-         &__item{
-        width: 100%;
-        display: inline;
-        border-top: none;
-        
-         }
      
     }
 

@@ -1,0 +1,81 @@
+.about{
+    @include main-section;
+    color: $black;
+    font-family: $poppins;
+    font-size: $small;
+    line-height: 1.8rem;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    text-align: center;
+
+    &__img{
+        width: 8rem;
+        border-radius: 50%;
+        border: 1px solid $sable;
+    }
+
+    &__title--top{
+        margin: 0.5rem;
+     }
+     
+     &__button {
+         i.fas, i.far {
+           font-size: 2rem;
+           background-color: $white;
+             }
+         }
+    
+    &__text{
+        text-align: left;
+    }  
+    
+    
+    &__title--bottom{
+        margin: 1rem 0 1rem 0;
+        color: $white;
+        font-weight: $regular;
+        background-color: $sable;
+     }
+
+     &__list{
+         list-style: circle;
+         text-align: left;
+         padding: 1rem;
+     }
+
+     &__link{
+         a{
+            text-decoration: none; 
+         }
+     }
+
+     &__animation{
+        margin: auto;
+        width: 14rem;
+
+        svg {
+            .gear{
+            animation-name: spin;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin: 80% 80%;
+        }
+
+        .code{
+            animation-name: wave;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        }
+       
+
+       
+
+    }
+
+
+     
+}

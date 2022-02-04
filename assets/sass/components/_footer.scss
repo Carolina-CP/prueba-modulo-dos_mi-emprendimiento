@@ -1,36 +1,61 @@
 .footer{
-    height: 80px;
+    height: 22vh;
     width: 100vw;
     background-color: $black;
     font-size: 1.2rem;
     font-family: $ubuntu;
-    color: white;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
-    align-content: center;
-    
+    padding: 1rem;
+
+    &__brand{
+        color: $white;
+    }
 
     &__link{
-        list-style-type: none;
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
     }
 
-    &__item {
-        display: inline-block;
-        padding: 20px 10px;
+    &__item{    
+        color: white;
+        text-decoration: none;
+        display: inline;
+        margin: 0.5rem;
+        
+    }
+
+
+    
+     &__email{
+         padding: 0.5rem;
+     }
+
+     &__email:focus{
+        background-color: $orange;
     }
 
     
-    &___item a {
-        color: white;
-        text-decoration: none;
-    }
 
     &__submit{
-        background-color: $tangerine;
-        padding: 1rem;
+        
+        background-color: $orange;
+        padding: 0.5rem;
     }
 
     &__submit:hover{
-        background-color: $orange;
+        background-color: $white;
     }
 }
+
+  /*a partir de pantalla tablet se divide a la mitad*/
+  @media screen and (min-width: 768px) {
+    .footer{
+        height: 18vh;
+        
+} 

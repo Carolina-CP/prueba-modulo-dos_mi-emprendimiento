@@ -2,8 +2,8 @@
     border-width: 1px;
     border-style: solid;
     border-color:$sable;
-    background-color: $orange;
-    padding: 1rem;
+    background-color: $white;
+    padding: 0.8rem;
     margin: 0;
     color: $sable;
 }
@@ -11,7 +11,7 @@
 @mixin card-container {
     border-width: 1px;
     border-style: solid;
-    border-color: $charcoal;
+    border-color: gray;
     background-color: $white;
     padding: 1rem;
     margin: 0;

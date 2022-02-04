@@ -1,8 +1,11 @@
+
 .header{
-    height: 200px;
-    width: 100vw;
-    background-image: url(/assets/imagenes/desarrolloweb2021t.svg);
-    background-repeat: no-repeat;
-    display: flex;
-    
+    text-align: center;
+
+    .header__img{
+        width: 35rem;
+        
+    }
 }
+
+    
